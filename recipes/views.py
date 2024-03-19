@@ -1,0 +1,1 @@
+from myproject.views import *
