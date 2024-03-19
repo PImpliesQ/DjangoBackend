@@ -40,9 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'leaderboardv1',
     'recipes',
-    
 ]
 
 MIDDLEWARE = [
@@ -84,13 +82,10 @@ DATABASES = {
         'USER': os.getenv("DB_USERNAME", "default_username"),
         'PASSWORD': os.getenv("DB_PASSWORD", "default_password"),
         'HOST': os.getenv("DB_HOST", "localhost"),
-        'PORT': '3306',
         'OPTIONS': {
-            'ssl': {
-                'ca': '/etc/ssl/cert.pem',
-                'ssl_mode': 'VERIFY_IDENTITY',
-            },
-        },
+            'ssl': {'ca': '/etc/ssl/certs/ca-certificates.crt'},
+            'charset': 'utf8mb4',
+        }
     }
 }
 
