@@ -2,7 +2,9 @@
 Defines view functions for handling recipe-related API requests, including creating a new recipe,
 retrieving a specific recipe by ID, and listing all recipe IDs. Uses Django Rest Framework (DRF)
 for request handling and serialization.
+Tested using Postman 
 """
+
 
 from django.shortcuts import render
 from rest_framework.decorators import api_view
